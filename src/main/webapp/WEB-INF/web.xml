@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
-         version="5.0">
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+         https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
 
-    <display-name>外卖订单管理系统</display-name>
+    <display-name>Food Order Servlet Assignment</display-name>
 
     <welcome-file-list>
         <welcome-file>order.html</welcome-file>
     </welcome-file-list>
 
+    <!-- Menu List Servlet -->
     <servlet>
         <servlet-name>MenuListServlet</servlet-name>
         <servlet-class>cs.sbs.web.servlet.MenuListServlet</servlet-class>
@@ -19,6 +21,7 @@
         <url-pattern>/menu</url-pattern>
     </servlet-mapping>
 
+    <!-- Order Create Servlet -->
     <servlet>
         <servlet-name>OrderCreateServlet</servlet-name>
         <servlet-class>cs.sbs.web.servlet.OrderCreateServlet</servlet-class>
@@ -28,6 +31,7 @@
         <url-pattern>/order</url-pattern>
     </servlet-mapping>
 
+    <!-- Order Detail Servlet -->
     <servlet>
         <servlet-name>OrderDetailServlet</servlet-name>
         <servlet-class>cs.sbs.web.servlet.OrderDetailServlet</servlet-class>

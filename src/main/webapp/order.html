@@ -1,20 +1,51 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>外卖平台 - 首页</title>
+    <title>Food Order System</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h2 { color: #333; }
+        form { margin-bottom: 30px; padding: 15px; border: 1px solid #ccc; border-radius: 5px; width: 300px; }
+        input { margin: 5px 0; padding: 5px; width: 100%; }
+        input[type="submit"] { background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        input[type="submit"]:hover { background-color: #45a049; }
+        .orders { margin-top: 20px; }
+        .order-link { margin: 5px 0; }
+        a { text-decoration: none; color: #2196F3; }
+        a:hover { text-decoration: underline; }
+    </style>
 </head>
 <body>
-<h1>欢迎来外卖平台</h1>
 
-<h2>新增订单</h2>
+<h2>Create Food Order</h2>
 
 <form action="/order" method="post">
-    用户: <input name="customer"><br>
-    食物: <input name="food"><br>
-    数量: <input name="quantity"><br>
-    <input type="submit">
+    Customer Name: <input type="text" name="customer"><br>
+    Food Name: <input type="text" name="food"><br>
+    Quantity: <input type="number" name="quantity"><br>
+    <input type="submit" value="Place Order">
 </form>
+
+<hr>
+
+<h3>Menu</h3>
+<ul>
+    <li>Fried Rice - $8</li>
+    <li>Fried Noodles - $9</li>
+    <li>Burger - $10</li>
+</ul>
+
+<div class="orders">
+    <h3>View Order Details</h3>
+    <div class="order-link">
+        <a href="/order/1001">Order #1001 (Click to view details)</a>
+    </div>
+    <div class="order-link">
+        <a href="/order/1002">Order #1002 (Click to view details)</a>
+    </div>
+    <p><em>Note: Replace the ID with actual order ID after creating an order</em></p>
+</div>
 
 </body>
 </html>
