@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class OrderCreateServlet extends HttpServlet {
 
     private static List<Order> orders = new ArrayList<>();
-    private static int nextId = 1000;  //
+    private static int nextId = 1001;  //
 
     // 提供一个公开的静态方法让其他类访问订单列表
     public static List<Order> getOrders() {
